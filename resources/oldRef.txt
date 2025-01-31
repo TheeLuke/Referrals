@@ -1,0 +1,69 @@
+ Player p = (Player) sender;
+
+        int playTimeSeconds = (p.getStatistic(Statistic.PLAY_ONE_MINUTE)/20);
+
+        if(args.length != 1) {
+            //get current play time
+            //get status if can referral
+            p.sendMessage(ChatColor.GREEN + p.getName());
+            if(playTimeSeconds > 900) {
+                p.sendMessage(main.getConfig().getString("can-referral"));
+            }
+
+            return true;
+        }
+
+
+
+        //if 15 minutes is true
+        //check IP
+        //check if player online
+        if(playTimeSeconds >= 15) {
+//            for(Player target : Bukkit.getOnlinePlayers()) {
+//                if(target.getAddress() == p.getAddress() ) { //&& target.getUniqueId() != p.getUniqueId()
+//                    p.sendMessage(main.prefix + main.getConfig().getString("failed-ip"));
+//                    return false;
+//                }
+//            }//checks IP address maybe?
+
+
+            Player targetPlayer = Bukkit.getPlayer(args[0]);
+            if(targetPlayer != null) {
+                CrateKey key = new CrateKey(main);
+
+                int slot = p.getInventory().firstEmpty();
+                p.getInventory().setItem(slot, key.getItem());
+                p.sendMessage("DEBUG: IT WORKS!");
+                //todo
+                //give items
+                //give money
+                return true;
+            }
+        }
+
+
+
+/////////////////////////////////////////////////////////////
+
+Player target;
+            for(Player t : Bukkit.getOnlinePlayers()) {
+                UUID tUUID = t.getUniqueId();
+                if(t.getName().equalsIgnoreCase(args[0])) {
+                    if(file.config.isSet(t.getUniqueId()+".username")) {
+                        if(t.isOnline()) {
+                            p.sendMessage("DEBUG: ONLINE");
+                            //send message thye got referred, when they get rewards
+                        }else {
+                            p.sendMessage("DEBUG: OFFLINE");
+                            //player is offline
+                            //set rewards in config to TRUE
+                            //
+                        }
+                    }else {
+                        p.sendMessage("DEBUG: FILE NO PLAYER");
+                    }
+                }
+
+
+
+            }

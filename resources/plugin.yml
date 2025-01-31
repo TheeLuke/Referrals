@@ -1,0 +1,11 @@
+name: Referrals
+version: '${project.version}'
+main: theeluke.referrals.Main
+api-version: 1.19
+commands:
+  ref:
+    description: 'Did a friend refer you to join? Use this for rewards!'
+    aliases:
+      - referral
+      - refer
+

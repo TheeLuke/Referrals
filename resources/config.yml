@@ -1,0 +1,64 @@
+#EnvisionSMP Referrals
+#Copyright 2023 - theeluke
+#
+#Prefixes - set to '' for no prefix. Use '§' for color.
+prefix: '§6[§aEnvisionSMP§6] §r'
+config-prefix: '[EnvisionSMP]'
+#
+#############################
+#Items
+#All items are created in code - if you want them to be configurable just DM.
+#############################
+#CrateKey name:
+crate-key-name: '§aCommon Key'
+reward-money: 1000.0
+money-action-bar-message: '§6%money% §ahas been added to your account.'
+#############################
+#Mesages
+#Default color is white
+#Use '§' followed by the color label to add color
+#############################
+#Message sent on player first join
+welcome-message: 'Did someone refer you to join us? Play for §c15 minutes §r to earn rewards for §ayou §rand your §dfriend§r!'
+#Player cannot use a referral on command execution
+failed-referral: 'You need to play for §c15 minutes §rbefore using a referral on a player.'
+#Failed same IP message
+failed-ip: 'Error! You cannot referral this player!'
+#Failed player is not online
+failed-offline: 'Error! That player is not online.'
+#Failed player does not exist on file
+failed-existence: 'Error! That player does not exist.'
+#Player did "/ref" and it has been 15 minutes
+can-referral: 'Did someone refer you to join? Do §c/referral <their name> §rto earn rewards!'
+#Player did "/ref" and it has not been 15 minutes
+#Minutes = {minutes} , Seconds = {seconds}
+cannot-referral: 'Did someone refer you to join? Play for §c{minutes} more minutes §rto earn rewards!'
+#Eligble but needs playtime
+#Minutes = %minutes%
+eligible-no-playtime: 'You are eligible to use a referral! Please play for §c%minutes% more minutes §rto earn rewards for you and your friend!'
+#Player exceeded 1 hour playtime limit
+exceeded-playtime: 'Whoops! You are no longer eligible for referral rewards! Invite your friends to earn rewards!'
+#Player recieved rewards:
+received-rewards: 'Referral rewards received!'
+received-money: '§c %money% §rhas been deposited into your account.'
+#Cannot referral same player
+same-player: 'Error! You cannot use another referral with this player!'
+#Too many args
+bad-args: 'Error! Incorrect arguments. §c/ref <name>:leaderboard'
+#Could not find player
+no-player: 'Error! Could not find that player!'
+#Player self referral
+self-referral: 'Error! You cannot use a referral on yourself!'
+#Player has already used referral
+used-referral: 'Error! You have already used your referral!'
+#Successful referral
+successful-referral: 'Referral rewards added! Thank you for playing on our server!'
+#Player inventory was full and rewards spawned at their location.
+full-inv: 'Your inventory is full! Rewards dropped at your location.'
+#############################
+#Leaderboard
+#Displayed at the top of the leaderboard message
+lb-header: '§a§lReferral Leaderboard'
+#Message sent for each player retrieved from leaderboard. %index% = Player current place (1st, 2nd, etc.), %name% = The player's name, %value% = player total referral points
+lb-player: '§a#%index% §8- §7%name%§8:§b %value% '
+#############################
